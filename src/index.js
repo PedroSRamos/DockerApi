@@ -1,4 +1,6 @@
 const express = require('express');
+const swaggerJSDoc = require('../Marvel-Api-marvelapi-1.0.0-resolved.json');
+const swaggerUi = require('swagger-ui-express');
 const router = require('./routes/route');
 const app = express();
 
