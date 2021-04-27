@@ -1,0 +1,117 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Marvel Api",
+    "version": "1.0.0",
+    "title": "Marvel API",
+    "contact": {
+      "email": "phsouzaramos@outlook.com"
+    },
+    "license": {
+      "name": "node 14.16.0",
+      "url": "https://openjsf.org/certification/"
+    }
+  },
+  "host": "virtserver.swaggerhub.com",
+  "basePath": "/Marvel-Api/marvelapi/1.0.0",
+  "tags": [
+    {
+      "name": "admins",
+      "description": "string"
+    },
+    {
+      "name": "Pedro Henrique de Souza Ramos",
+      "description": "API da Marvel"
+    }
+  ],
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/inventory": {
+      "get": {
+        "summary": "API disponibilizada pela Marvel",
+        "description": "Listas com todos os nomes de personagens, as revistas em quadrinhos da marvel e o lançamento",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "nomepersonagens/quadrinhos/datalançamento",
+            "description": "nomes de persoangens,revistas em quadrinhos relacionadas e a data de lançamento",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/InventoryItem"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Requisição realizada"
+          },
+          "400": {
+            "description": "Erro de requisição"
+          },
+          "500": {
+            "description": "Erro interno no servidor"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "InventoryItem": {
+      "type": "string",
+      "required": [
+        "id",
+        "name",
+        "series",
+        "stories"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "example": "101132"
+        },
+        "name": {
+          "type": "string",
+          "example": "spider-Man"
+        },
+        "releaseDate": {
+          "type": "string",
+          "format": "date-time",
+          "example": "1610-04-12 / 13:20:00"
+        },
+        "series": {
+          "type": "string",
+          "example": "Ultimate Universe"
+        },
+        "stories": {
+          "type": "string",
+          "example": "Known to authorities"
+        },
+        "manufacturer": {
+          "$ref": "#/definitions/Manufacturer"
+        }
+      }
+    },
+    "Manufacturer": {
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "Marvel"
+        },
+        "homePage": {
+          "type": "string",
+          "format": "url",
+          "example": "https://developer.marvel.com/"
+        }
+      }
+    }
+  }
+}
