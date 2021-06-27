@@ -1,9 +1,5 @@
 const axios = require('axios');
 
-const ts = process.env.ts;
-const apikey = process.env.apikey;
-const hash = process.env.hash;
-
 const urlBaseMarvel = 'http://gateway.marvel.com/v1/public/characters';
 
 const listAll = async (req, res) => {
