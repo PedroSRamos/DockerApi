@@ -9,3 +9,11 @@ https://hub.docker.com/repository/docker/pedrohsramos/node-marvel-api
 
 SWAGGER
 https://app.swaggerhub.com/apis/Marvel-Api/marvelapi/1.0.0
+
+Como rodar a api:
+Instale primeiro as ferramentas como : Git, Node.js e uma ferramenta para trabalhar com o codigo usei a Visual Studio Code.
+
+Usei as seguntes tecnologias: Jest, Express, Node.js, Axios.
+
+Rodando o programa:
+
