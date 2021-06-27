@@ -5,20 +5,30 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nyc mocha --reporter spec test/**/*.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PedroSRamos/Topicos_Avancados_Api.git"
   },
-  "author": "",
+  "author": "Pedro Henrique de Souza Ramos",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/PedroSRamos/Topicos_Avancados_Api/issues"
-  },
-  "homepage": "https://github.com/PedroSRamos/Topicos_Avancados_Api#readme",
   "dependencies": {
     "axios": "^0.21.1",
-    "express": "^4.17.1"
+    "chai": "^4.3.4",
+    "dockerfile": "^0.1.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mocha": "^8.4.0",
+    "nodemon": "^2.0.7",
+    "sinon": "^10.0.0",
+    "swagger-jsdoc": "^3.4.0",
+    "swagger-ui-express": "^4.0.7"
+  },
+  "devDependencies": {
+    "nyc": "^15.1.0",
+    "supertest": "^6.1.3",
+    "typescript": "^4.2.4"
   }
 }
+
